@@ -1,12 +1,12 @@
 import React from 'react';
 
-const SearchBar = ({ onChange }) => {
+const SearchBar = ({ handleSearchChange }) => {
     return (
         <div>
-            <form className="m-3">
-                <input className="shadow"
+            <form className="m-3 text-center">
+                <input className="shadow col-6" placeholder="Enter"
                     onChange={
-                        e => onChange(e)
+                        e => handleSearchChange(e)
                     }
                 />
             </form>
