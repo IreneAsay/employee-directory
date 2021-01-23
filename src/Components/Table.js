@@ -3,10 +3,11 @@ import React from 'react';
 const Table = (props) => {
     return (
         <div>
-            <table className="table">
-                <thead className="thead-light">
+            <table className="table table-striped ">
+                <thead className="bg-primary text-white">
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Photo</th>
                         <th scope="col">Location</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
@@ -16,8 +17,11 @@ const Table = (props) => {
                 </thead>
                 <tbody>
                     {props.users.map((user, i) => (
-                        <tr key={i}>
+                        <tr className="table-primary" key={i}>
                             <th scope="row">{i + 1}</th>
+                            <td>
+                                <img src={user.picture.thumbnail} alt={user.name.first + ' ' + user.name.last} />
+                            </td>
                             <td>{user.location.state}</td>
                             <td>{user.name.first}</td>
                             <td>{user.name.last}</td>
