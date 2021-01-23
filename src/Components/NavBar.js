@@ -1,11 +1,11 @@
 import React from 'react';
 import SearchBar from './SearchBar'
 
-const NavBar = ({ onChange }) => {
+const NavBar = ({ handleSearchChange }) => {
     return (
         <nav>
             <div>
-                <SearchBar onChange={onChange} />
+                <SearchBar handleSearchChange={handleSearchChange} />
             </div>
         </nav>
     );
