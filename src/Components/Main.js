@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './NavBar'
 import { getUsers } from '../utils/API'
 import Table from './Table'
+import { isDOMComponentElement } from 'react-dom/test-utils';
 
 class Main extends Component {
 
@@ -16,12 +17,13 @@ class Main extends Component {
     }
 
     handleSearchChange = event => {
-        console.log(event.target.value);
         const filter = event.target.value;
         const filteredList = this.state.users.filter(item => {
-            // Logic to filter users
+            // Logic to filter users by state
+            console.log(item)
+            return item.name.first === filter;
         });
-        this.setState({ filteredUsers: filteredList });
+        this.setState({ users: filteredList });
     }
 
 
