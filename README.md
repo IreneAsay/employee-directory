@@ -4,7 +4,7 @@ Demo (https://ireneasay.github.io/employee-directory/)
 
 ## Project Description
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. This React-based app will allow users to filter the employee list by first or last name as they type; in addition, users can sort the list by the employee location, first name, or last name for organization or readability.
+An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. This React-based app will allow users to filter the employee list by first or last name as they type; in addition, users can sort the list by the employee location, first name, or last name for readability.
 
 ![Screenshot](/public/Screenshot_employee_directory.png)
 
