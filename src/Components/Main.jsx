@@ -8,7 +8,6 @@ class Main extends Component {
   state = {
     users: [],
     filterUsers: [],
-    // sortLocation: [],
     inputValue: "",
   };
   componentDidMount() {
@@ -33,15 +32,9 @@ class Main extends Component {
       }
     });
     this.setState({ ...this.state, filterUsers: filteredList });
-
-    // <onClick= {sortLocation}></onClick>
-
-    // const sortedList = this.state.data.sort () => {
-
-    //     }
   };
 
-  handleSort = () => {
+  handleSortLocation = () => {
     // console.log(this.state.users);
     const sortedList = this.state.users.sort((a, b) =>
       a.location.state.localeCompare(b.location.state)
@@ -49,19 +42,22 @@ class Main extends Component {
     this.setState({ ...this.state, filterUsers: sortedList });
   };
 
-  handleSort = () => {
-    // console.log(this.state.users);
-    const sortedList = this.state.users.sort((a, b) =>
-      a.location.state.localeCompare(b.location.state)
-    );
-    this.setState({ ...this.state, filterUsers: sortedList });
-  };
+  // handleSort = () => {
+  //   // console.log(this.state.users);
+  //   const sortedList = this.state.users.sort((a, b) =>
+  //     a.location.state.localeCompare(b.location.state)
+  //   );
+  //   this.setState({ ...this.state, filterUsers: sortedList });
+  // };
 
   render() {
     return (
       <>
         <NavBar handleSearchChange={this.handleSearchChange} />
-        <Table users={this.state.filterUsers} handleSort={this.handleSort} />
+        <Table
+          users={this.state.filterUsers}
+          handleSortLocation={this.handleSortLocation}
+        />
       </>
     );
   }
