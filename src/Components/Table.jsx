@@ -14,7 +14,7 @@ const Table = (props) => {
                 props.handleSortLocation();
               }}
             >
-              Location (state)
+              Location <i className="far fa-caret-square-up"></i>
             </th>
             <th
               scope="col"
@@ -22,7 +22,7 @@ const Table = (props) => {
                 props.handleSortFirstName();
               }}
             >
-              First Name
+              First Name <i class="far fa-caret-square-up"></i>
             </th>
             <th
               scope="col"
@@ -30,7 +30,7 @@ const Table = (props) => {
                 props.handleSortLastName();
               }}
             >
-              Last Name
+              Last Name <i class="far fa-caret-square-up"></i>
             </th>
             <th scope="col">Phone Number</th>
             <th scope="col">Email Address</th>
