@@ -7,18 +7,32 @@ const Table = (props) => {
         <thead className="bg-primary text-white">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Photo</th>
+            <th scope="col">Employee Photo</th>
             <th
               scope="col"
               onClick={() => {
-                props.handleSort();
+                props.handleSortLocation();
               }}
             >
-              Location
+              Location (state)
             </th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Phone</th>
+            <th
+              scope="col"
+              onClick={() => {
+                props.handleSortFirstName();
+              }}
+            >
+              First Name
+            </th>
+            <th
+              scope="col"
+              onClick={() => {
+                props.handleSortLastName();
+              }}
+            >
+              Last Name
+            </th>
+            <th scope="col">Phone Number</th>
             <th scope="col">Email Address</th>
           </tr>
         </thead>

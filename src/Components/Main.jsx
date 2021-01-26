@@ -42,13 +42,21 @@ class Main extends Component {
     this.setState({ ...this.state, filterUsers: sortedList });
   };
 
-  // handleSort = () => {
-  //   // console.log(this.state.users);
-  //   const sortedList = this.state.users.sort((a, b) =>
-  //     a.location.state.localeCompare(b.location.state)
-  //   );
-  //   this.setState({ ...this.state, filterUsers: sortedList });
-  // };
+  handleSortFirstName = () => {
+    // console.log(this.state.users);
+    const sortedFirstName = this.state.users.sort((a, b) =>
+      a.name.first.localeCompare(b.name.first)
+    );
+    this.setState({ ...this.state, filterUsers: sortedFirstName });
+  };
+
+  handleSortLastName = () => {
+    // console.log(this.state.users);
+    const sortedLastName = this.state.users.sort((a, b) =>
+      a.name.last.localeCompare(b.name.last)
+    );
+    this.setState({ ...this.state, filterUsers: sortedLastName });
+  };
 
   render() {
     return (
@@ -57,6 +65,9 @@ class Main extends Component {
         <Table
           users={this.state.filterUsers}
           handleSortLocation={this.handleSortLocation}
+          handleSortFirstName={this.handleSortFirstName}
+          handleSortFirstName={this.handleSortFirstName}
+          handleSortLastName={this.handleSortLastName}
         />
       </>
     );
